@@ -4,4 +4,4 @@ set -e
 set -x
 
 [ -f ../pyproject.toml ] && cd ..
-poetry run pytest tests/
+poetry run pytest -s tests/
