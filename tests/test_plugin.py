@@ -3,10 +3,12 @@ import shlex
 import subprocess
 import venv
 from pathlib import Path
-from typing import List
+from typing import List, Union
 
 
-def run_and_echo(cmd: str | List[str], verbose=True, **kw):
+def run_and_echo(
+    cmd: Union[str, List[str]], verbose=True, **kw
+) -> subprocess.CompletedProcess:
     if isinstance(cmd, str):
         cmd = shlex.split(cmd)
     if verbose:
