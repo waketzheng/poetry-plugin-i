@@ -4,7 +4,7 @@ set -e
 set -x
 
 [ -f ../pyproject.toml ] && cd ..
-ruff check --extend-select=I .
-ruff format --check .
-mypy .
+poetry run ruff check --extend-select=I .
+poetry run ruff format --check .
+poetry run mypy .
 echo Done. ✨ 🍰 ✨
