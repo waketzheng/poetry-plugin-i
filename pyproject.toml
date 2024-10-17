@@ -22,6 +22,7 @@ poetry = ">=1.8.0"
 pytest = "^8.3.3"
 ruff = "^0.6.8"
 mypy = "^1.11.2"
+bandit = "^1.7.10"
 
 [build-system]
 requires = ["poetry-core"]
